@@ -12,15 +12,19 @@ func main() {
 	args := os.Args
 	var name string
 	var module bool = false
-	if len(args) < 2 {
-		name = "SomeGoProject"
+	if len(args) == 1 {
+		name = "NewGoProject"
 	} else {
 		name = args[1]
 	}
 	if len(args) > 2 {
-		if args[2] == "-m" {
-			module = true
+		for i := 2; i < len(args); i++ {
+			// TODO: add switch case if more flags added
+			if args[i] == "-m" {
+				module = true
+			}
 		}
+
 	}
 
 	infoDir, _ := os.Stat(name)

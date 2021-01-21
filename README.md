@@ -1,6 +1,7 @@
 # GO-NEW Tool
 
 This is a small Golang tool, to generate a Golang Starter Project from commandline.
+(Only tested on macOS and Ubuntu)
 
 ## Install
 
